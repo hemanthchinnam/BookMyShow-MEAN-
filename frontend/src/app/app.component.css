@@ -1,0 +1,52 @@
+body{
+  background-image:url('https://images7.alphacoders.com/117/1176198.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+font-family: 'Times New Roman', Times, serif;
+}
+.example-spacer {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  /* max-width: 980px; */
+ 
+  font-family: 'Times New Roman', Times, serif;
+}
+.footer {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 22px;
+}
+
+.sidenav .header {
+  padding: 10px;
+}
+
+form {
+  font-size: 14px;
+}
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+.mat-form-field {
+  width: 100px;
+}
+.mat-button {
+  padding: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+@media only screen and (max-width: 480px) {
+  .hide-small-screen {
+    display: none;
+  }
+  .mat-vertical-content {
+    padding: 0 !important;
+  }
+}

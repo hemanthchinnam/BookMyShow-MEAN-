@@ -1,0 +1,139 @@
+<div *ngIf="loading; else result">
+    <mat-spinner></mat-spinner>
+  </div>
+  <ng-template #result>
+    <ng-container *ngIf="!error">
+      <mat-card>
+        <mat-card-content>
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <h1>Update Movie Details {{ movie._id }}</h1>
+  
+            <mat-list>
+              <mat-list-item>
+                <mat-form-field class="full-width">
+                  <input
+                    matInput
+                    placeholder="Name"
+                    formControlName="name"
+                    required
+                  />
+                  <mat-error> Please provide a name </mat-error>
+                </mat-form-field>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-form-field class="full-width">
+                  <input
+                    matInput
+                    placeholder="Slug"
+                    formControlName="slug"
+                    required
+                  />
+                  <mat-error> Please provide a slug </mat-error>
+                </mat-form-field>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-form-field class="full-width">
+                  <input
+                    matInput
+                    placeholder="Release Year"
+                    formControlName="year"
+                    required
+                  />
+                  <mat-error>Year of Release </mat-error>
+                </mat-form-field>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-form-field class="full-width">
+                  <input
+                    matInput
+                    placeholder="Price"
+                    formControlName="price"
+                    required
+                  />
+                  <mat-error> Please provide a price </mat-error>
+                </mat-form-field>
+              </mat-list-item>
+              <mat-list-item>
+                <div>
+                  <mat-form-field class="full-width">
+                    <input
+                      matInput
+                      placeholder="Image"
+                      formControlName="image"
+                      required
+                    />
+                    <mat-error> Please provide a image </mat-error>
+                  </mat-form-field>
+                  </div>
+                 </mat-list-item>
+              
+              <mat-list-item>
+                <mat-form-field class="full-width">
+                  <input
+                    matInput
+                    placeholder="Genre"
+                    formControlName="Genre"
+                    required
+                  />
+                  <mat-error> Please provide a Genre </mat-error>
+                </mat-form-field>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-form-field class="full-width">
+                  <input
+                    matInput
+                    placeholder="TicketsAvailable"
+                    formControlName="TicketsAvailable"
+                    required
+                  />
+                  <mat-error> Please provide a Number of TicketsAvailable </mat-error>
+                </mat-form-field>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-form-field class="full-width">
+                  <input
+                    matInput
+                    placeholder="Like"
+                    formControlName="Like"
+                    required
+                  />
+                  <mat-error>Provide Like count </mat-error>
+                </mat-form-field>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-form-field class="full-width">
+                  <input
+                    matInput
+                    placeholder="Dislike"
+                    formControlName="Dislike"
+                    required
+                  />
+                  <mat-error>Provide DisLike count </mat-error>
+                </mat-form-field>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-form-field class="full-width">
+                  <input
+                    matInput
+                    placeholder="Description"
+                    formControlName="description"
+                    required
+                  />
+                  <mat-error> Please provide a description </mat-error>
+                </mat-form-field>
+              </mat-list-item>
+  
+              <mat-list-item>
+                <button [disabled]="loading" mat-raised-button color="primary">
+                  Update
+                </button>
+                <mat-spinner [diameter]="30" *ngIf="loading"></mat-spinner>
+                <a mat-button routerLink="/admin/movies"> Back </a>
+              </mat-list-item>
+            </mat-list>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+  </ng-template>
+  

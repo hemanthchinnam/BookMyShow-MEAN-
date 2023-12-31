@@ -1,0 +1,28 @@
+.container{
+     margin-top: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.mat-card-content{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: medium;
+    color: #333;
+    
+   padding: 10px;
+    border-radius: 8px;
+  }
+  .mat-card {
+  block-size: 80%;
+  background-color: lightgoldenrodyellow;
+    margin-right: 10px;
+  }
+  .mat-card-image {
+    width: 100%;
+    max-height: 90%;
+    object-fit: cover; 
+    position: relative;
+    border-radius: 8px; 
+    
+  }

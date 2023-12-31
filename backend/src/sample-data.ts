@@ -1,0 +1,92 @@
+import { Movie } from './models/movie.model';
+import { User } from './models/user.model';
+import bcrypt from 'bcryptjs';
+
+export const movies: Movie[] = [
+  {
+    name: "Animal",
+    slug: "Animal",
+    year: 2023,
+    image: "../assets/images/Movies/animal.jpg",
+    Genre: "Action,Drama",
+    description: "The film stars Ranbir Kapoor, Anil Kapoor, Bobby Deol, Rashmika Mandanna, and Tripti Dimri. In the film, Ranvijay Vijay Singh learns about an assassination attempt on his father and sets out to exact revenge. The film was officially announced in January 2021, along with the title of the film.",
+    price: 500,
+    TicketsAvailable: 50,
+    like: 2,
+    dislike: 0,
+    rating: 4.5,
+    numReviews: 15,
+    reviews: [],
+  },
+  {
+    name: "Salaar",
+    slug: "Salaar",
+    year: 2023,
+    image: "../assets/images/Movies/salaar.jpg",
+    Genre: "Action",
+    description: "It is the tale of two best friends from childhood, who grow old to become the worst enemies. The story was so big that the writer-director chose to elaborate it in two parts. Deva aka Salaar and Varadaraj Mannar's story of friendship, trust, sacrifice, and vengeance is all about Salaar.",
+    price: 550,
+    TicketsAvailable: 150,
+    like: 2,
+    dislike: 0,
+    rating: 4.7,
+    numReviews: 10,
+    reviews: [],
+  },
+  {
+    name: "Dunki",
+    slug: "Dunki",
+    year: 2023,
+    image: "../assets/images/Movies/dunki.webp",
+    Genre: "Drama",
+    description: "A group of friends use a backdoor process to move to another country, then struggle to return home.",
+    price: 575,
+    TicketsAvailable: 500,
+    like: 2,
+    dislike: 0,
+    rating: 4.2,
+    numReviews: 115,
+    reviews: [],
+  },
+  {
+    name: "Dune 2",
+    slug: "Dune 2",
+    year: 2024,
+    image: "../assets/images/Movies/dune2.jpg",
+    Genre: "Sci-fi",
+    description: " Paul Atreides continues his journey, united with Chani and the Fremen, as he seeks revenge against the conspirators who destroyed his family, and endeavors to prevent a terrible future that only he can predict.",
+    price: 450,
+    TicketsAvailable: 225,
+    like: 2,
+    dislike: 0,
+    rating: 4.0,
+    numReviews: 125,
+    reviews: [],
+  },
+  {
+    name: "Fighter",
+    slug: "Fighter",
+    year: 2024,
+    image: "../assets/images/Movies/fighter.jpg",
+    Genre: "Action",
+    description: "Fighter is an upcoming Indian Hindi-language action film directed by Siddharth Anand and produced by Viacom18 Studios and Marflix Pictures. The film stars Deepika Padukone, Hrithik Roshan and Anil Kapoor, and serves as the first film in a planned aerial action franchise.",
+    price: 400,
+    TicketsAvailable: 170,
+    like: 2,
+    dislike: 0,
+    rating: 4.0,
+    numReviews: 58,
+    reviews: [],
+  },
+ 
+];
+
+export const users: User[] = [
+  
+  {
+    name: 'Hemanth',
+    email: 'Hch@example.com',
+    password: bcrypt.hashSync('123456'),
+    isAdmin: true,
+  },
+];

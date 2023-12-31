@@ -1,0 +1,94 @@
+
+<mat-stepper
+  selectedIndex="2"
+  #stepper
+  [orientation]="(stepperOrientation | async)!"
+>
+  <!-- payment-method.component.html -->
+<mat-step label="Payment Method" editable="false" completed="false">
+  <mat-card>
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" #ngForm="ngForm">
+        <h2>Payment Method</h2>
+        <mat-list>
+          <mat-list-item>
+            <mat-radio-group
+              formControlName="paymentMethod"
+              aria-label="Select an option"
+              class="radio-group"
+              [ngClass]="{
+                invalid:
+                  ngForm.submitted && this.form.controls.paymentMethod.invalid
+              }"
+            >
+              <mat-radio-button class="radio-button" value="Giftcard">Gift card</mat-radio-button>
+              <mat-radio-button class="radio-button" value="CreditDebitCard">Credit/Debit Card</mat-radio-button>
+              <mat-radio-button class="radio-button" value="UPI">UPI</mat-radio-button>
+              <mat-error
+                *ngIf="
+                  ngForm.submitted && this.form.controls.paymentMethod.invalid
+                "
+              >
+                This field is required
+              </mat-error>
+            </mat-radio-group>
+          </mat-list-item>
+
+          <!-- Additional fields for Credit/Debit Card -->
+          <mat-list-item *ngIf="form.controls.paymentMethod.value === 'Giftcard'">
+            <label for="Giftcard">Gift card Number:</label>
+            <input type="text" id="Giftcard" formControlName="Giftcard">
+            <mat-error *ngIf="form.controls.Giftcard.hasError('required')">Gift card number is required</mat-error>
+            <mat-error *ngIf="form.controls.Giftcard.hasError('pattern')">Gift card number is invalid</mat-error>
+          </mat-list-item>
+          
+          <mat-list-item *ngIf="form.controls.paymentMethod.value === 'CreditDebitCard'">
+            <div fxLayout="row" fxLayoutAlign="start">
+              <div fxFlex="50%">
+                <div>
+                  <label for="cardNumber">Card Number:</label>
+                  <input type="number" id="cardNumber" formControlName="cardNumber">
+                  <mat-error *ngIf="form.controls.cardNumber.hasError('required')">Card Number is required</mat-error>
+                  <mat-error *ngIf="form.controls.cardNumber.hasError('pattern')">Invalid Card Number</mat-error>
+                </div>
+          
+                <div>
+                  <label for="Cvv">CVV:</label>
+                  <input type="number" id="Cvv" formControlName="Cvv">
+                  <mat-error *ngIf="form.controls.Cvv.hasError('required')">CVV is required</mat-error>
+                  <mat-error *ngIf="form.controls.Cvv.hasError('pattern')">Invalid CVV</mat-error>
+                </div>
+          
+                <div>
+                  <label for="Expiry">Expiry date:</label>
+                  <input type="text" id="Expiry" formControlName="Expiry">
+                  <mat-error *ngIf="form.controls.Expiry.hasError('required')">Expiry date is required</mat-error>
+                  <mat-error *ngIf="form.controls.Expiry.hasError('pattern')">Invalid Expiry date format (MM/YY)</mat-error>
+                </div>
+          
+                <div>
+                  <label for="Name">Card Holder's Name:</label>
+                  <input type="text" id="Name" formControlName="Name">
+                  <mat-error *ngIf="form.controls.Name.hasError('required')">Card Holder's Name is required</mat-error>
+                </div>
+          
+              </div>
+            </div>
+          </mat-list-item>
+          
+          <mat-list-item *ngIf="form.controls.paymentMethod.value === 'UPI'">
+            <label for="upiId">UPI ID:</label>
+            <input type="text" id="upiId" formControlName="upiId">
+            <mat-error *ngIf="form.controls.upiId.hasError('required')">UPI ID is required</mat-error>
+            <mat-error *ngIf="form.controls.upiId.hasError('pattern')">Invalid UPI ID</mat-error>
+          </mat-list-item>
+          
+          <mat-list-item>
+            
+            &nbsp;
+            <button color="primary" mat-raised-button mat-button (click)="goPlaceOrder()">
+              Next
+            </button>
+          </mat-list-item>
+        
+        

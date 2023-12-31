@@ -1,0 +1,11 @@
+mat-card {
+  max-width: 400px;
+  margin: 1em auto;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+}
+mat-list-item {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}

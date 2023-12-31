@@ -1,0 +1,14 @@
+mat-card {
+    max-width: 100%;
+    margin:  auto;
+    text-align: center;
+  }
+  
+  .hide {
+    display: none;
+  }
+  table {
+    width: 100%;
+  }
+  
+ 

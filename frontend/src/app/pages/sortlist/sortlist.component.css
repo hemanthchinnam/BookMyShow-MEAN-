@@ -9,7 +9,6 @@
     font-weight: bold;
     font-size: medium;
     color: #333;
-    
    padding: 10px;
     border-radius: 8px;
   }
@@ -22,7 +21,7 @@
     width: 100%;
     max-height: 90%;
     object-fit: cover; 
-    position: relative;
+    position: absolute;
     border-radius: 8px; 
     
   }

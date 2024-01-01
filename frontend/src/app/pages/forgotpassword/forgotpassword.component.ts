@@ -22,11 +22,11 @@ export class ForgotpasswordComponent {
       (response) => {
         console.log(response.message);
         alert(response.message);
-        // Handle success (e.g., show a success message to the user)
+        
       },
       (error) => {
         console.error(error.message);
-        // Handle error (e.g., show an error message to the user)
+        
       }
     );
   }

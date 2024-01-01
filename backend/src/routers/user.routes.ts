@@ -188,7 +188,7 @@ userRouter.post('/reset-password', asyncHandler(async (req: Request, res: Respon
 
       console.log('User after password reset:', user);
 
-      res.status(200).json({ message: 'Password reset successful', user:resetpassword });
+      res.status(200).json({ message: 'Password reset successfully!..... please go to login', user:resetpassword });
     } else {
       res.status(400).json({ message: 'Invalid or expired token' });
     }

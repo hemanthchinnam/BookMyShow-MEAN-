@@ -32,9 +32,7 @@ mongoose
 app.use('/api/users', userRouter);
 app.use('/api/movies', movieRouter);
 app.use('/api/bookings', bookingRouter);
-app.get('/api/config/paypal', (req: Request, res: Response) => {
-  res.send({ clientId: process.env.PAYPAL_CLIENT_ID || 'sb' });
-});
+
 
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, './frontend/dist/frontend')));

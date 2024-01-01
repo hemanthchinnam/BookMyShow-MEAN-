@@ -1,4 +1,4 @@
-<div >
+<div>
     <input type="text" [(ngModel)]="searchText" placeholder="Search" (input)="filterEvents()" />
     <button (click)="sortBy('name')">Sort by Name</button>
     <button (click)="sortBy('price')">Sort by Price</button>
@@ -6,7 +6,7 @@
     <button (click)="sortBy('year')">Sort by year</button>
 </div>
 <div class="container">
-<div fxFlex="25%" fxFlex.xs="33%" fxFlex.sm="100%" *ngFor="let event of filteredEvents">
+<div fxFlex="33%" fxFlex.xs="33%" fxFlex.sm="100%" *ngFor="let event of filteredEvents">
     <mat-card>
         <a [routerLink]="'/movies/' + event.slug">
             <img mat-card-image [src]="event.image" /> </a>

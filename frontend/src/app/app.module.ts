@@ -33,7 +33,7 @@ import { SwiperModule } from 'swiper/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { ProductDetailsComponent } from './pages/Movie-details/Movie-details.component';
+import { MovieDetailsComponent } from './pages/Movie-details/Movie-details.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 
@@ -65,7 +65,7 @@ import { SortlistComponent } from './pages/sortlist/sortlist.component';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    ProductDetailsComponent,
+    MovieDetailsComponent,
     BookingDetailsComponent,
     PaymentMethodComponent,
     OrderComponent,

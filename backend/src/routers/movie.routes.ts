@@ -109,8 +109,7 @@ movieRouter.get(
 movieRouter.get(
   '/seed',
   asyncHandler(async (req: Request, res: Response) => {
-    // await UserModel.remove();
-    // await ProductModel.remove();
+  
     const createdUsers = await UserModel.insertMany(users);
     const createdMovies = await MovieModel.insertMany(movies);
     res.send({ createdUsers, createdMovies });
@@ -233,7 +232,7 @@ movieRouter.post(
         review: updatedMovie.reviews[updatedMovie.reviews.length - 1],
       });
     } else {
-      res.status(404).send({ message: 'Product Not Found' });
+      res.status(404).send({ message: 'Movie Not Found' });
     }
   })
 );

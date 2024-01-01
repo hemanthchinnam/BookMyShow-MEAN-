@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Cart, Item } from '../models/cart';
-import { Product } from '../models/product';
+
 import { environment } from '../../environments/environment';
 import { Movies } from '../models/movies';
 

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './helpers/auth.guard';
 import { HomeComponent } from './pages/home/home.component';
-import { ProductDetailsComponent } from './pages/Movie-details/Movie-details.component';
+import { MovieDetailsComponent } from './pages/Movie-details/Movie-details.component';
 import { ResetpasswordComponent } from './pages/resetpassword/resetpassword.component';
 import { ForgotpasswordComponent } from './pages/forgotpassword/forgotpassword.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -59,7 +59,7 @@ const routes: Routes = [
   },
   
   { path: 'bookings/:id', canActivate: [AuthGuard], component: OrderComponent },
-  { path: 'movies/:slug', component: ProductDetailsComponent },
+  { path: 'movies/:slug', component: MovieDetailsComponent },
   
   {
     path: 'admin/dashboard',
@@ -97,7 +97,7 @@ const routes: Routes = [
     component: AdminUserEditComponent,
     canActivate: [AdminGuard],
   },
-  { path: 'movies/:slug', component: ProductDetailsComponent },
+  { path: 'movies/:slug', component: MovieDetailsComponent },
   { path: '', component: HomeComponent },
 
 ];

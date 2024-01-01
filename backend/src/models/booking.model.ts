@@ -49,8 +49,7 @@ export class Booking {
   @prop({ required: true, default: 0 })
   public itemsPrice!: number;
   @prop({ required: true, default: 0 })
-  public shippingPrice!: number;
-  @prop({ required: true, default: 0 })
+
   public taxPrice!: number;
   @prop({ required: true, default: 0 })
   public totalPrice!: number;

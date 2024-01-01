@@ -14,7 +14,7 @@ import { MovieService } from 'src/app/services/movie.service';
   templateUrl: './Movie-details.component.html',
   styleUrls: ['./Movie-details.component.css'],
 })
-export class ProductDetailsComponent implements OnInit {
+export class MovieDetailsComponent implements OnInit {
   form: FormGroup;
   currentUser: UserInfo | null = null;
   submitted = false;

@@ -3,8 +3,7 @@ import { IPayPalConfig} from 'ngx-paypal';
 import { ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Order } from 'src/app/models/order';
-import { OrderService } from 'src/app/services/order.service';
+
 import { AuthService } from 'src/app/services/auth.service';
 import { UserInfo } from 'src/app/models';
 import { Booking } from 'src/app/models/bookings';

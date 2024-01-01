@@ -1,7 +1,5 @@
 <body>
-  <mat-stepper selectedIndex="1" #stepper [orientation]="(stepperOrientation | async)!">
-    <mat-step label="Login" completed="true" editable="false"> </mat-step><mat-step label="Booking Details"
-      editable="false">
+  
       <div class="container mt-3">
         <h2>Booking Details</h2>
 
@@ -26,11 +24,7 @@
         </mat-table>
         </div>
         <div class="text-center mt-3">
-          <button mat-button color="secondary" (click)="redirectToPayment()">Proceed to Payment</button>
+          <button mat-button color='primary' (click)="redirectToPayment()">Proceed to Payment</button>
         </div>
-    </mat-step>
-    <mat-step label="Payment Method" editable="false" completed="false">
-    </mat-step>
-    <mat-step label="Place Order" editable="false" completed="false"> </mat-step>
-  </mat-stepper>
+    
 </body>

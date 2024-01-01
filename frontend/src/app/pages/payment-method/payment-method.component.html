@@ -1,11 +1,5 @@
 
-<mat-stepper
-  selectedIndex="2"
-  #stepper
-  [orientation]="(stepperOrientation | async)!"
->
-  <!-- payment-method.component.html -->
-<mat-step label="Payment Method" editable="false" completed="false">
+
   <mat-card>
     <mat-card-content>
       <form [formGroup]="form" (ngSubmit)="onSubmit()" #ngForm="ngForm">

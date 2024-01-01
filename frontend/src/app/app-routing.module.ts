@@ -8,7 +8,7 @@ import { ForgotpasswordComponent } from './pages/forgotpassword/forgotpassword.c
 import { LoginComponent } from './pages/login/login.component';
 import { BookingDetailsComponent } from './pages/BookingDetails/BookingDetails.component';
 import { PaymentMethodComponent } from './pages/payment-method/payment-method.component';
-import { PlaceOrderComponent } from './pages/Confirm-Booking/Confirm-Booking.component';
+import {  confirmbooking } from './pages/Confirm-Booking/Confirm-Booking.component';
 import { OrderComponent } from './pages/Booked/Booked.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
@@ -53,8 +53,8 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
-    path: 'place-order',
-    component: PlaceOrderComponent,
+    path: 'confirmbooking',
+    component: confirmbooking,
     canActivate: [AuthGuard],
   },
   

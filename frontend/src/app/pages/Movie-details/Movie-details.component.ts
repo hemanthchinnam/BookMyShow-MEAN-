@@ -85,7 +85,7 @@ export class ProductDetailsComponent implements OnInit {
       });
     }
   }
-  addToCart() {
+  addToBooking() {
     const { _id, image, name, slug, price } = this.movie;
     this.cartService
       .add({ _id, image, name, slug, price, quantity: 1 })

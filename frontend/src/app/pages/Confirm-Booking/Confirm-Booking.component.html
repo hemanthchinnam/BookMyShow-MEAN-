@@ -1,14 +1,4 @@
-<mat-stepper
-  selectedIndex="3"
-  #stepper
-  [orientation]="(stepperOrientation | async)!"
->
-  <mat-step label="Login" completed="true" editable="false"> </mat-step
-  ><mat-step label="Booking Details" completed="true" editable="false">
-  </mat-step>
-  <mat-step label="Payment Method" completed="true" editable="false">
-  </mat-step>
-  <mat-step label="Make Booking" editable="false" completed="false">
+
     <h1>Confirm Booking</h1>
     <div fxLayout="row wrap" fxLayoutGap="20px grid" fxLayoutGap.xs="10px grid">
       <div fxFlex="70%" fxFlex.xs="100%">
@@ -130,5 +120,4 @@
         </mat-card>
       </div>
     </div>
-  </mat-step>
-</mat-stepper>
+

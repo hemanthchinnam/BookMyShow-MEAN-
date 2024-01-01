@@ -57,19 +57,17 @@ export class PaymentMethodComponent implements OnInit {
 
     const { paymentMethod } = this.form.controls;
     this.cartService.savePaymentMethod(paymentMethod.value);
-    this.router.navigate(['/place-order']);
+    this.router.navigate(['/confirmbooking']);
   }
 
   goPlaceOrder() {
     if (this.form.invalid) {
-      alert('Form is invalid. Please check the fields.');
-      return
-      ;
+      return;
     }
 
     const { paymentMethod } = this.form.controls;
     if (paymentMethod.value === 'Giftcard' || paymentMethod.value === 'CreditDebitCard' || paymentMethod.value === 'UPI') {
-      this.router.navigate(['/place-order']);
+      this.router.navigate(['/confirmbooking']);
     } else {
       this.router.navigate(['/booking']);
     }

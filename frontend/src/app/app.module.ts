@@ -36,10 +36,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProductDetailsComponent } from './pages/Movie-details/Movie-details.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-//import { CartComponent } from './pages/cart/cart.component';
+
 import { BookingDetailsComponent } from './pages/BookingDetails/BookingDetails.component';
 import { PaymentMethodComponent } from './pages/payment-method/payment-method.component';
-import { PlaceOrderComponent } from './pages/Confirm-Booking/Confirm-Booking.component';
+import { confirmbooking } from './pages/Confirm-Booking/Confirm-Booking.component';
 import { OrderComponent } from './pages/Booked/Booked.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { OrderHistoryComponent } from './pages/Booking-history/Booking-history.component';
@@ -68,7 +68,6 @@ import { SortlistComponent } from './pages/sortlist/sortlist.component';
     ProductDetailsComponent,
     BookingDetailsComponent,
     PaymentMethodComponent,
-    PlaceOrderComponent,
     OrderComponent,
     RegisterComponent,
     ProfileComponent,
@@ -76,7 +75,7 @@ import { SortlistComponent } from './pages/sortlist/sortlist.component';
     SearchComponent,
     AdminUsersComponent,
     AdminUserEditComponent,
-   
+   confirmbooking,
     AdminMoviesComponent,
     AdminMovieEditComponent,
     AdminBookingsComponent,

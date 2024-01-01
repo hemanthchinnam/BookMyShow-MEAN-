@@ -4,7 +4,7 @@ import { CartService } from 'src/app/services/cart.service';
 import { Title } from '@angular/platform-browser';
 import { Cart, Item } from 'src/app/models/cart';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { OrderService } from 'src/app/services/order.service';
+
 import { StepperOrientation } from '@angular/cdk/stepper';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
@@ -15,7 +15,7 @@ import { BookingService } from 'src/app/services/booking.service';
   templateUrl: './Confirm-Booking.component.html',
   styleUrls: ['./Confirm-Booking.component.css'],
 })
-export class PlaceOrderComponent implements OnInit {
+export class confirmbooking implements OnInit {
   loadingPlaceBooking = false;
   cart!: Cart;
   cartService: CartService;

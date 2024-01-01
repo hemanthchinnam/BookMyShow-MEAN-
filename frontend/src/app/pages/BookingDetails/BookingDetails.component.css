@@ -1,40 +1,57 @@
 body {
+  font-family: 'Times New Roman', Times, serif;
+   padding: 5px;
+   background-color: rgb(107, 146, 188);
+   margin: 1em auto;
+   font-size: 24px;
+  }
  
-  padding: 5px;
-  background-color: rgb(0, 123, 255);
-  margin: 1em auto;
+  .theatre-container {
+   margin-top: 20px;
+   font-family: 'Times New Roman', Times, serif;
  }
-
- .theatre-container {
-  margin-top: 20px;
-}
-
-.theatre-name {
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.show-timings {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: flex-end;
-}
-
-.timing-button {
-  color: black;
-  padding: 10px;
-  cursor: pointer;
-  border: 1px solid #007bff;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.timing-button:hover, .timing-button:active, .timing-button:focus {
-  background-color: #007bff;
-  border-color: #007bff;
-}
-.mat-button.selected {
-  background-color: #007bff;
-  color: #fff;
-}
+ 
+ .theatre-name {
+   padding: 10px;
+   margin-bottom: 10px;
+   font-family: 'Times New Roman', Times, serif;
+ }
+ 
+ .show-timings {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   justify-content: flex-end;
+ }
+ 
+ .timing-button {
+   color: black;
+   padding: 10px;
+   cursor: pointer;
+   border: 1px solid #14e491;
+   border-radius: 5px;
+   transition: background-color 0.3s;
+ }
+ 
+ .timing-button:hover, .timing-button:active, .timing-button:focus {
+   background-color: #13b78b;
+   border-color: #007bff;
+ }
+ .mat-button.selected {
+   background-color: #4800ff;
+   color: #fff;
+ }
+ .mat-button{
+   background-color: #00ff80;
+ }
+ .mat-header-cell{
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 32px;
+   color: #0a0808;
+   text-align: center;
+ }
+ .mat-cell{
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 20px;
+   font-weight: bold;
+ }

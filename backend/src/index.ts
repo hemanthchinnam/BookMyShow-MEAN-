@@ -6,7 +6,7 @@ import mongoose from 'mongoose';
 import { userRouter } from './routers/user.routes';
 import { bookingRouter } from './routers/booking.routes';
 import { movieRouter } from './routers/movie.routes';
-import { uploadRouter } from './routers/upload.routes';
+
 
 dotenv.config();
 
@@ -28,7 +28,7 @@ mongoose
   .catch((err) => {
     console.log('error mongodb');
   });
-app.use('/api/uploads', uploadRouter);
+
 app.use('/api/users', userRouter);
 app.use('/api/movies', movieRouter);
 app.use('/api/bookings', bookingRouter);

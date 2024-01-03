@@ -24,4 +24,6 @@ Note: Need to start "monogd" before starting the project in order to successfull
        npm start 
 in both the terminal parts to start backend and frontend respectively.
 
+In utils.js Give "your Email Id" and "Your Pass Key" from google
+
 After starting you can view the output in your browser running on "http://localhost:4200/".

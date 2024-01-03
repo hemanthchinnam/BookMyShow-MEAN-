@@ -6,15 +6,15 @@ export const sendResetPasswordEmail = (user: User): void => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'mukheshkumar8747@gmail.com',
-      pass: 'kqcd tssr ifba znap',
+      user: 'Your Email Id',
+      pass: 'Your Pass Key',
     },
   });
 
   // Send email with reset link
   const resetLink = `http://localhost:4200/reset-password?token=${user.resetPasswordToken}`;
   const mailOptions = {
-    from: 'mukheshkumar8747@gmail.com',
+    from: 'Your Email Id',
     to: user.email,
     subject: 'Password Reset',
     html: `<p>You are receiving this because you (or someone else) have requested the reset of the password for your account.</p>
